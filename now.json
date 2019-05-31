@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "builds": [
+    {"src": "handlerone/*.go", "use": "@now/go@canary"},
+    {"src": "handlertwo/*.go", "use": "@now/go@canary"}
+  ],
+  "routes": [
+    {"src": "^/(.*)", "dest": "/api/$1/index.go"}
+  ]
+}
